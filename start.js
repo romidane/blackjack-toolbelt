@@ -2,9 +2,10 @@
 'use strict';
 
 require('babel/register')({
+    test: 'value',
     ignore: false,
     only: [
-        'node_modules/'
+        'node_modules/**/*'
     ]
 });
 
