@@ -2,11 +2,7 @@
 'use strict';
 
 require('babel/register')({
-    test: 'value',
-    ignore: false,
-    only: [
-        'node_modules/**/*'
-    ]
+    ignore: false
 });
 
 module.exports = require('index');

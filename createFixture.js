@@ -1,11 +1,7 @@
 'use strict';
 
 require('babel/register')({
-    test: 'value',
-    ignore: false,
-    only: [
-        'node_modules/**/*'
-    ]
+    ignore: false
 });
 
 var fs = require('fs');
