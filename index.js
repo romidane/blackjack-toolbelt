@@ -23,13 +23,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/component/:brand.js', (req, res) => {
-    jsCompiler({file: config.templates.base.script}).then((jsContent) => {
+    const brand = req.params.brand;
+
+    jsCompiler({file: config.templates[brand].script}).then((jsContent) => {
         res.send(jsContent);
     });
 });
 
 app.get('/component/:brand.css', (req, res) => {
-    sass({file: config.templates.base.style}).then((css) => {
+    const brand = req.params.brand;
+
+    sass({file: config.templates[brand].style}).then((css) => {
         res.set('Content-type', 'text/css');
         res.send(css);
     });
