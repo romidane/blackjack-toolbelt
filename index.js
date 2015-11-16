@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
-    const brand = req.params.brand ? req.params.brand : 'base';
+    const brand = req.query.brand ? req.query.brand : 'base';
     const dataFile = fileSelector(brand, 'data');
     const data = dataFile ? require(config.templates.base.data) : {};
 
