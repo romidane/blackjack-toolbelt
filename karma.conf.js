@@ -2,7 +2,7 @@ module.exports = function(config) {
   config.set({
     frameworks: ['jasmine-jquery', 'jasmine'],
     browsers: ['PhantomJS2'],
-    singleRun: false,
+    singleRun: true,
     basePath: '../../',
     files: [
       { pattern: 'test/fixtures/*.html', included: false, served: true },
