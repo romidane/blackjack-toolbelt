@@ -9,6 +9,10 @@ module.exports = function(config) {
       'scripts/*.js',
       'test/**/*.js',
       'node_modules/component-tools/testBootstrap.js',
-    ]
+    ],
+    reporters: ['specjson', 'dots'],
+    specjsonReporter: {
+      outputFile: "karma-specs.json"
+    }
   });
 };
