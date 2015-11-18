@@ -1,0 +1,4 @@
+{
+    "specs": "features/*.md",
+    "results": "node_modules/component-tools/karma-specs.json"
+}

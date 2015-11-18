@@ -12,7 +12,7 @@ module.exports = function(config) {
     ],
     reporters: ['specjson', 'dots'],
     specjsonReporter: {
-      outputFile: "karma-specs.json"
+      outputFile: "node_modules/component-tools/karma-specs.json"
     }
   });
 };
