@@ -6,11 +6,15 @@ module.exports = function(config) {
     basePath: '../../',
     files: [
       { pattern: 'test/fixtures/*.html', included: false, served: true },
+      'node_modules/component-tools/node_modules/sinon/pkg/sinon.js',
       'scripts/*.js',
       'test/**/*.js',
       'node_modules/component-tools/testBootstrap.js',
     ],
-    reporters: ['specjson', 'dots'],
+    preprocessors: {
+      'scripts/*.js': ['coverage']
+    },
+    reporters: ['specjson', 'dots', 'coverage'],
     specjsonReporter: {
       outputFile: "node_modules/component-tools/karma-specs.json"
     }

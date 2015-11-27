@@ -4,6 +4,7 @@ import { compile as hbs } from 'component-api/src/compilers/hbsCompiler';
 import { compile as jsCompiler } from 'component-api/src/compilers/jsCompiler';
 import config from 'component.json';
 import fileSelector from 'fileSelector';
+import unirest from 'unirest';
 
 let app = express();
 
@@ -19,6 +20,15 @@ app.get('/', (req, res) => {
         res.render('index', {component: template, brand: brand});
     }).catch((err) => {
         console.log(err);
+    });
+});
+
+
+app.get('/search', (req, res) => {
+    const term = req.query.term;
+
+    unirest.get('https://secure.suggest.search.sky.com/tv?term=' + term).headers({'Accept': 'application/json'}).end(function(response) {
+        res.send(response.body);
     });
 });
 
