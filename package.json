@@ -20,7 +20,8 @@
     "karma-spec-json-reporter": "0.0.8",
     "shouldit": "^0.4.7",
     "sinon": "^1.17.2",
-    "unirest": "^0.4.2"
+    "unirest": "^0.4.2",
+    "shouldit": "^0.4.7"
   },
   "gitHead": "e3fe591a2376326fa1ca5ba44dbd28a235c505c9",
   "readme": "# Component Tools\n\nThis is the NPM package to run along side of the component framework.\n\n`npm install sky-uk/sky-c-tools`\n",
@@ -29,4 +30,5 @@
   "_shasum": "b8aaf3d62fef8234fc25c56424d5084fa24cf829",
   "_from": "sky-uk/sky-c-tools#create-component-tools",
   "_resolved": "git+ssh://git@github.com/sky-uk/sky-c-tools.git#e3fe591a2376326fa1ca5ba44dbd28a235c505c9"
+  }
 }
