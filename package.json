@@ -1,9 +1,9 @@
 {
   "name": "component-tools",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is the NPM package to run along side of the component framework.",
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint -c eslint.conf.json --ext .js ."
+    "eslint": "eslint -c eslint.conf.json --ext .js ."
   },
   "author": "",
   "license": "ISC",
@@ -13,11 +13,22 @@
     "eslint": "^1.9.0",
     "jasmine": "^2.3.2",
     "karma": "^0.13.15",
+    "karma-coverage": "^0.5.3",
     "karma-jasmine": "^0.2.2",
     "karma-jasmine-jquery": "^0.1.1",
     "karma-phantomjs2-launcher": "^0.3.2",
     "karma-spec-json-reporter": "0.0.8",
     "shouldit": "^0.4.7",
-    "sinon": "^1.17.2"
+    "sinon": "^1.17.2",
+    "unirest": "^0.4.2",
+    "shouldit": "^0.4.7"
+  },
+  "gitHead": "e3fe591a2376326fa1ca5ba44dbd28a235c505c9",
+  "readme": "# Component Tools\n\nThis is the NPM package to run along side of the component framework.\n\n`npm install sky-uk/sky-c-tools`\n",
+  "readmeFilename": "README.md",
+  "_id": "component-tools@1.0.0",
+  "_shasum": "b8aaf3d62fef8234fc25c56424d5084fa24cf829",
+  "_from": "sky-uk/sky-c-tools#create-component-tools",
+  "_resolved": "git+ssh://git@github.com/sky-uk/sky-c-tools.git#e3fe591a2376326fa1ca5ba44dbd28a235c505c9"
   }
 }

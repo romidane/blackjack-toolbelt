@@ -11,7 +11,10 @@ module.exports = function(config) {
       'test/**/*.js',
       'node_modules/component-tools/testBootstrap.js',
     ],
-    reporters: ['specjson', 'dots'],
+    preprocessors: {
+      'scripts/*.js': ['coverage']
+    },
+    reporters: ['specjson', 'dots', 'coverage'],
     specjsonReporter: {
       outputFile: "node_modules/component-tools/karma-specs.json"
     }

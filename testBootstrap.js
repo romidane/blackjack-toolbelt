@@ -7,3 +7,10 @@ function triggerEvent(elem, event) {
     e.initMouseEvent(event, true, true);
     elem.dispatchEvent(e);
 }
+
+function keyUp(elem, key) {
+    var event = document.createEvent('Events');
+    event.initEvent('keyup', true, true);
+    event.keyCode = key;
+    elem.dispatchEvent(event);
+}
