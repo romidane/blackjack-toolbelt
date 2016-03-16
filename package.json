@@ -1,6 +1,6 @@
 {
-  "name": "component-tools",
-  "version": "1.0.0",
+  "name": "blackjack-tools",
+  "version": "0.0.1",
   "description": "This is the NPM package to run along side of the component framework.",
   "scripts": {
     "eslint": "eslint -c eslint.conf.json --ext .js ."
