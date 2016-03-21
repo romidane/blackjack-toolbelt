@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  "env": {
+    "jasmine": true
+  },
+  "rules": {
+    "react/jsx-no-bind": [2, {
+      "ignoreRefs": false,
+      "allowArrowFunctions": true,
+      "allowBind": false
+    }],
+    "react/prefer-stateless-function" : 0,
+    "comma-dangle": 0
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  }
+}
