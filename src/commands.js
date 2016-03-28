@@ -8,6 +8,7 @@ export function get() {
     .option('init', 'Create a new component.')
     .option('lint', 'Lint all in test and lib dirs.')
     .option('test', 'Run JS tests in your test directory.')
+    .option('mocha', 'Run JS mocha in your test directory.')
     .option('bundle', 'Creates a production bundle of CSS/JS.')
     .parse(process.argv);
 
