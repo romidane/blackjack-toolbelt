@@ -8,7 +8,7 @@
 * [Usage](#usage)
 * [Running](#running)
 * [Contributors](#contributors)
-* [Contributing & Bug Reports](#contributing-bug-reports)
+* [Contributing & Bug Reports](#contributing--bug-reports)
 
 
 ## Background
