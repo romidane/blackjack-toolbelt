@@ -1,3 +1,3 @@
-export function call(){
-  console.log("[Mocha] Call()");
-};
+export function call() {
+  console.log('[Mocha] Call()');
+}

@@ -1,3 +1,3 @@
-export function call(){
-  console.log("[Bundle] Call()");
-};
+export function call() {
+  console.log('[Bundle] Call()');
+}

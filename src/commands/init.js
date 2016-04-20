@@ -1,3 +1,3 @@
-export function call(){
-  console.log("[Init] Call()");
-};
+export function call() {
+  console.log('[Init] Call()');
+}
