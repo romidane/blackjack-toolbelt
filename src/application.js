@@ -9,6 +9,8 @@ export function run(){
     const name = options._name;
     const command = require(`./commands/${name}`);
 
+    console.log(`Running '${name}' command...\n`);
+
     command.call(options);
   };
 
