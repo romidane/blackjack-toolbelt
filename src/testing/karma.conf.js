@@ -1,6 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
-var consts = require('../bjconstants');
+var consts = require('../constants');
 
 
 module.exports = function(config) {
