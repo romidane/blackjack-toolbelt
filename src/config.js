@@ -1,4 +1,4 @@
-import constants from './constants';
+import constants from './bjconstants';
 
 const config = require(constants.COMPONENT_CONF);
 

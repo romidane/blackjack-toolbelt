@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import nodemon from 'nodemon';
 import blackjackConfig from '../config';
+import consts from '../bjconstants';
 
 
 const WEBPACK_PORT = 3001;
@@ -50,7 +51,7 @@ export default {
             ]
         },
         output: {
-            path: path.join(__dirname, '../dist'),
+            path: path.join(__dirname, '../../dist'),
             filename: 'bundle.js',
             publicPath: 'http://localhost:3001/watch/assets/'
         },
@@ -64,45 +65,35 @@ export default {
                     ]
                 },
                 {
-                    test: /\.scss$/,
-                    loaders: [
-                        'style-loader?singleton',
-                        'css-loader?sourceMap',
-                        'sass-loader?outputStyle=expanded&sourceMap'
-                    ]
-                },
-                {
-                    test: /html5shiv/,
-                    loaders: [
-                        'file-loader?name=html5shiv.js'
-                    ]
-                },
-                {
-                    test: /ecos_surveycode/,
-                    loaders: [
-                        'file-loader?name=ecos_surveycode.js'
-                    ]
-                },
-                {
                     test: /\.js$|.jsx$/,
+                    loader: 'babel-loader',
+                    query: {
+                        presets: [
+                            require.resolve('babel-preset-es2015'),
+                            require.resolve('babel-preset-react'),
+                            require.resolve('babel-preset-stage-0'),
+                        ]
+                    },
                     include: [
-                        path.resolve(__dirname, 'src')
-                    ],
-                    loaders: [
-                        'react-hot-loader',
-                        'babel-loader'
+                        consts.BLACKJACK_HOME + '/node_modules',
+                        consts.WORKING_DIR + '/node_modules',
+                        consts.WORKING_DIR + '/src'
                     ]
                 }
             ]
         },
         resolve: {
             extensions: ['', '.js', '.jsx'],
-            modulesDirectories: ['node_modules', 'src']
+            root: consts.WORKING_DIR + '/src'
         },
+        resolveLoader: {
+            root: consts.BLACKJACK_HOME + '/node_modules'
+        },
+
         plugins: [
             new webpack.PrefetchPlugin('react'),
 
-            new webpack.HotModuleReplacementPlugin(),
+            //new webpack.HotModuleReplacementPlugin(),
 
             // These variables are visible only through the chain of files defined on the entrypoint
             new webpack.DefinePlugin({
