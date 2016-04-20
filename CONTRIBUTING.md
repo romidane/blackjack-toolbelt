@@ -4,7 +4,7 @@ Contribution to the project is openly encouraged.
 
 ## Creating issues
 
-Submit issues on the [issue tracker](issues) for suggestions, recommendations, and bugs.
+Submit issues on the [issue tracker](https://github.com/sky-uk/blackjack-tools/issues) for suggestions, recommendations, and bugs.
 
 ## Pull requests
 
