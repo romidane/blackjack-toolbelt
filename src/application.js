@@ -25,15 +25,12 @@ export function run() {
     description('Lint all in test and lib dirs.').
     action(executeCommand);
 
-  commander.command('mocha').
-    description('Run JS mocha in your test directory.').
-    action(executeCommand);
-
   commander.command('preview').
     description('Preview the built component locally.').
     action(executeCommand);
 
   commander.command('test').
+    option('-r, --runner [type]', 'Which test runner you wish to run the tests with [mocha|karma].').
     description('Run JS tests in your test directory.').
     action(executeCommand);
 

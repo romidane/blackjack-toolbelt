@@ -5,6 +5,7 @@
 
 * [Background](#background)
 * [Installation](#installation)
+* [Prerequisites](#prerequisites)
 * [Usage](#usage)
 * [Running](#running)
 * [Contributors](#contributors)
@@ -25,6 +26,17 @@ You can install the toolkit via NPM:
 ```
 npm install -g sky-uk/blackjack-tools
 ```
+
+
+## Prerequisites
+
+The target application you're running tests on should have the following babel packages installed:
+
+* babel-preset-es2015
+* babel-preset-react
+* babel-preset-stage-0
+
+*Note:* we're working on ensuring these dependencies are managed outside of the application.
 
 
 ## Usage
