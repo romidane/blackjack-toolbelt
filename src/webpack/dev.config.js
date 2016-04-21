@@ -2,7 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import nodemon from 'nodemon';
 import blackjackConfig from '../config';
-import consts from '../bjconstants';
+import consts from '../constants';
 
 
 const WEBPACK_PORT = 3001;

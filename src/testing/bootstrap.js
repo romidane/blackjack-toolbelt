@@ -1,4 +1,4 @@
-var consts = require('../bjconstants');
+var consts = require('../constants');
 
 // require('app-module-path')
 //   .addPath(consts.WORKING_DIR + '/node_modules');

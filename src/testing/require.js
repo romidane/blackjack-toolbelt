@@ -1,4 +1,4 @@
-var consts = require('bjconstants');
+var consts = require('constants');
 
 require("babel-register")({
   presets: ['es2015', 'stage-0'],
