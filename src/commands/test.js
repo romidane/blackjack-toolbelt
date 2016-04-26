@@ -7,11 +7,6 @@ import {
   KARMA_BIN
 } from '../constants';
 
-// MOCHA ISSUES
-//
-// * Get working with including JSX components.
-// * Ensure the user doesn't need to install babel deps.
-
 export function call(options) {
   const runner = options.runner || 'mocha';
 
@@ -22,7 +17,6 @@ export function call(options) {
     break;
 
     case 'karma':
-      // TODO
       exec(`${KARMA_BIN} start ${KARMA_CONF}`);
     break;
 
