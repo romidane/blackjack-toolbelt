@@ -41,6 +41,21 @@ The target application you're running tests on should have the following babel p
 
 For more information on the supported commands, run `blackjack --help`.
 
+Commands are currently being developed, the status of them is defined below.
+
+
+### Complete
+
+* **lint** - lint all in test and lib dirs.
+* **test** - run JS tests in your test directory.
+
+
+### Pending
+
+* **bundle** - creates a production bundle of CSS/JS.
+* **init** - create a new component.
+* **preview** - preview the built component locally.
+
 
 ## Contributors
 
