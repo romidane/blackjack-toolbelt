@@ -1,5 +1,6 @@
 import commander from 'commander';
 import info from '../package.json';
+import logger from './util/logger';
 
 export function run() {
   commander.version(info.version);
@@ -8,7 +9,7 @@ export function run() {
     const name = options._name;
     const command = require(`./commands/${name}`);
 
-    console.log(`Running '${name}' command...\n`);
+    logger.info(`Running '${name}' command...\n`);
 
     command.call(options);
   }

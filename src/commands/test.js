@@ -1,4 +1,5 @@
 import exec from '../util/exec';
+import logger from '../util/logger';
 import {
   MOCHA_BIN,
   TEST_GLOB,
@@ -21,7 +22,7 @@ export function call(options) {
     break;
 
     default:
-      console.warn('Test runner unsupported!');
+      logger.warn(`Test runner '${runner}' unsupported!`);
     break;
 
   }
