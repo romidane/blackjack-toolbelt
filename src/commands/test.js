@@ -23,7 +23,7 @@ export function call(options) {
 
     case 'karma':
       // TODO
-      // exec(`export NODE_PATH=${BLACKJACK_HOME}/src && ${KARMA_BIN} start ${KARMA_CONF}`);
+      exec(`${KARMA_BIN} start ${KARMA_CONF}`);
     break;
 
     default:

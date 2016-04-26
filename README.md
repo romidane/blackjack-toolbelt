@@ -32,9 +32,7 @@ npm install -g sky-uk/blackjack-tools
 
 The target application you're running tests on should have the following babel packages installed:
 
-* babel-preset-es2015
-* babel-preset-react
-* babel-preset-stage-0
+* babel-loader
 
 *Note:* we're working on ensuring these dependencies are managed outside of the application.
 
