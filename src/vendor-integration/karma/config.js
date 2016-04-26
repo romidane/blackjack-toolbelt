@@ -11,7 +11,6 @@ module.exports = function(config) {
     browsers: [ 'PhantomJS' ],
     files: [
         BLACKJACK_HOME + '/node_modules/babel-polyfill/dist/polyfill.js',
-        BLACKJACK_HOME + '/src/testing/bootstrap.js',
         WORKING_DIR + '/tests/**/*.js'
     ],
     preprocessors: {
@@ -61,7 +60,6 @@ module.exports = function(config) {
     concurrency: Infinity
   };
 
-  karmaConf.preprocessors[`${BLACKJACK_HOME}/src/testing/bootstrap.js`] = ['webpack'];
   karmaConf.preprocessors[`${WORKING_DIR}/tests/**/*.js`] = ['webpack'];
   karmaConf.preprocessors[`${BLACKJACK_HOME}/node_modules/react/react.js`] = ['babel'];
   karmaConf.preprocessors[`${WORKING_DIR}/node_modules/react/react.js`] = ['babel'];
