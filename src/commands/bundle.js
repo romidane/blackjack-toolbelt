@@ -1,3 +1,3 @@
 export function call() {
-  console.log('[Bundle] Call()');
+  console.log('This is a stub for the bundle command, it is not yet implemented.');
 }
