@@ -5,8 +5,12 @@ const BLACKJACK_HOME = constants.BLACKJACK_HOME;
 const WORKING_DIR = constants.WORKING_DIR;
 
 require("babel-register")({
-  presets: ['es2015', 'stage-0'],
-  sourceMaps: 'inline'
+  sourceMaps: 'inline',
+  presets: [
+    'es2015',
+    'react',
+    'stage-0'
+  ]
 });
 
 module.exports = {
