@@ -18,9 +18,12 @@ export function run() {
     description('Creates a production bundle of CSS/JS.').
     action(executeCommand);
 
-  commander.command('init').
-    description('Create a new component.').
-    action(executeCommand);
+  commander.command('init <name>').
+    description('Create a new component project from called [name].').
+    action((name, options) => {
+      options.name = name;
+      executeCommand(options);
+    });
 
   commander.command('lint').
     description('Lint all in test and lib dirs.').
