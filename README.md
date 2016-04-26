@@ -5,6 +5,7 @@
 
 * [Background](#background)
 * [Installation](#installation)
+* [Prerequisites](#prerequisites)
 * [Usage](#usage)
 * [Running](#running)
 * [Contributors](#contributors)
@@ -27,9 +28,33 @@ npm install -g sky-uk/blackjack-tools
 ```
 
 
+## Prerequisites
+
+The target application you're running tests on should have the following babel packages installed:
+
+* babel-loader
+
+*Note:* we're working on ensuring these dependencies are managed outside of the application.
+
+
 ## Usage
 
 For more information on the supported commands, run `blackjack --help`.
+
+Commands are currently being developed, the status of them is defined below.
+
+
+### Complete
+
+* **lint** - lint all in test and lib dirs.
+* **test** - run JS tests in your test directory.
+
+
+### Pending
+
+* **bundle** - creates a production bundle of CSS/JS.
+* **init** - create a new component.
+* **preview** - preview the built component locally.
 
 
 ## Contributors
