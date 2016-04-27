@@ -1,8 +1,6 @@
 const path = require("path");
-const consts = require('../../constants');
-
-const WORKING_DIR = consts.WORKING_DIR;
-const BLACKJACK_HOME = consts.BLACKJACK_HOME;
+const BLACKJACK_HOME = process.env.BLACKJACK_HOME;
+const WORKING_DIR = process.env.WORKING_DIR;
 
 module.exports = function(config) {
   var karmaConf = {
@@ -43,7 +41,8 @@ module.exports = function(config) {
         resolve: {
           root: [
             path.join(BLACKJACK_HOME, 'node_modules'),
-            path.join(WORKING_DIR, 'node_modules')
+            path.join(WORKING_DIR, 'node_modules'),
+            path.join(WORKING_DIR, 'src')
           ]
         },
     },

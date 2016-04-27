@@ -1,8 +1,6 @@
+const BLACKJACK_HOME = process.env.BLACKJACK_HOME;
+const WORKING_DIR = process.env.WORKING_DIR;
 const paths = require('app-module-path');
-const constants = require('constants');
-
-const BLACKJACK_HOME = constants.BLACKJACK_HOME;
-const WORKING_DIR = constants.WORKING_DIR;
 
 require("babel-register")({
   sourceMaps: 'inline',
@@ -13,12 +11,8 @@ require("babel-register")({
   ]
 });
 
-module.exports = {
-
-  setup(){
-    paths.addPath(`${BLACKJACK_HOME}/node_modules`);
-    paths.addPath(`${WORKING_DIR}/node_modules`);
-    paths.addPath(`${WORKING_DIR}/src`);
-  }
-
-}
+module.exports = function(){
+  paths.addPath(`${BLACKJACK_HOME}/node_modules`);
+  paths.addPath(`${WORKING_DIR}/node_modules`);
+  paths.addPath(`${WORKING_DIR}/src`);
+}()
