@@ -1,5 +1,6 @@
 import commander from 'commander';
 import info from '../package.json';
+import logger from './util/logger';
 
 export function run() {
   commander.version(info.version);
@@ -8,7 +9,7 @@ export function run() {
     const name = options._name;
     const command = require(`./commands/${name}`);
 
-    console.log(`Running '${name}' command...\n`);
+    logger.info(`Running '${name}' command...\n`);
 
     command.call(options);
   }
@@ -17,9 +18,12 @@ export function run() {
     description('Creates a production bundle of CSS/JS.').
     action(executeCommand);
 
-  commander.command('init').
-    description('Create a new component.').
-    action(executeCommand);
+  commander.command('init <name>').
+    description('Create a new component project from called [name].').
+    action((name, options) => {
+      options.name = name;
+      executeCommand(options);
+    });
 
   commander.command('lint').
     description('Lint all in test and lib dirs.').
