@@ -1,9 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import nodemon from 'nodemon';
-import blackjackConfig from '../config';
-import consts from '../constants';
-
+import consts from '../../constants';
 
 const WEBPACK_PORT = 3001;
 
@@ -45,7 +43,7 @@ export default {
         devtool: 'source-map',
         entry: {
             app: [
-                blackjackConfig.example
+                // blackjackConfig.example
                 // 'webpack/hot/only-dev-server',
                 // `webpack-dev-server/client?http://localhost:${WEBPACK_PORT}`
             ]
