@@ -29,8 +29,8 @@ export function run() {
     description('Lint all in test and lib dirs.').
     action(executeCommand);
 
-  commander.command('preview').
-    description('Preview the built component locally.').
+  commander.command('server').
+    description('Preview the built component locally using a development server.').
     action(executeCommand);
 
   commander.command('test').
