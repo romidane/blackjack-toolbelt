@@ -23,6 +23,7 @@
     "change-case": "^2.3.1",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
+    "ejs": "^2.4.1",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-jasmine": "^1.6.0",
@@ -38,9 +39,11 @@
     "mkdirp": "^0.5.1",
     "mocha": "^2.4.5",
     "nexpect": "^0.5.0",
+    "nodemon": "^1.9.1",
     "phantomjs-prebuilt": "^2.1.7",
     "react": "^0.14.7",
     "react-inlinesvg": "^0.4.2",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }
