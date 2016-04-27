@@ -4,9 +4,12 @@ import {
   MOCHA_BIN,
   TEST_GLOB,
   BLACKJACK_HOME,
+  WORKING_DIR,
   KARMA_CONF,
   KARMA_BIN
 } from '../constants';
+
+const ENV_VARS = `BLACKJACK_HOME=${BLACKJACK_HOME} WORKING_DIR=${WORKING_DIR}`
 
 export function call(options) {
   const runner = options.runner || 'mocha';
@@ -18,7 +21,7 @@ export function call(options) {
     break;
 
     case 'karma':
-      exec(`${KARMA_BIN} start ${KARMA_CONF}`);
+      exec(`${ENV_VARS} ${KARMA_BIN} start ${KARMA_CONF}`);
     break;
 
     default:
