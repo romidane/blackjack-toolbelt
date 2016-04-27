@@ -17,7 +17,7 @@ export function call(options) {
   switch(runner){
 
     case 'mocha':
-      exec(`${MOCHA_BIN} "${TEST_GLOB}" --require ${BLACKJACK_HOME}/src/vendor-integration/mocha/environment.js --harmony --es_staging`);
+      exec(`${ENV_VARS} ${MOCHA_BIN} "${TEST_GLOB}" --require ${BLACKJACK_HOME}/src/vendor-integration/mocha/environment.js --harmony --es_staging`);
     break;
 
     case 'karma':
