@@ -9,7 +9,7 @@ module.exports = function(config) {
     browsers: [ 'PhantomJS' ],
     files: [
         BLACKJACK_HOME + '/node_modules/babel-polyfill/dist/polyfill.js',
-        WORKING_DIR + '/tests/**/*.js'
+        WORKING_DIR + '/test/**/*.js'
     ],
     preprocessors: {
       'lib/**/*.js': ['babel'],
