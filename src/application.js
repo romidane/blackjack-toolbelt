@@ -14,10 +14,6 @@ export function run() {
     command.call(options);
   }
 
-  commander.command('bundle').
-    description('Creates a production bundle of CSS/JS.').
-    action(executeCommand);
-
   commander.command('init <name>').
     description('Create a new component project from called [name].').
     action((name, options) => {
