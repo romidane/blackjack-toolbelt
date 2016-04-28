@@ -11,7 +11,8 @@ import {
 
 const SERVER_PORT = process.env.PORT || 3000;
 const COMPONENT_CONFIG = require(COMPONENT_CONF);
-const PREVIEW_PATH =  COMPONENT_CONFIG.blackjack.preview;
+const BLACKJACK_CONFIG =  COMPONENT_CONFIG.blackjack || {};
+const PREVIEW_PATH =  BLACKJACK_CONFIG.preview;
 
 if(!PREVIEW_PATH){
   throw 'No blackjack.preview setting found in package.json!';
