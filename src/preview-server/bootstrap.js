@@ -62,6 +62,9 @@ app.use(
       },
       plugins: [
           new Webpack.PrefetchPlugin('react'),
+          new Webpack.DefinePlugin({
+              'process.env.WEBPACK_BUILD': 'true'
+          })
       ]
     }), {
       publicPath: '/assets/',
