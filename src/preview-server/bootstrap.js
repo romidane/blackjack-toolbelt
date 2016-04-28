@@ -1,6 +1,7 @@
-import express from 'express';
-import webpack from 'webpack';
-import webpackMiddleware from 'webpack-dev-middleware';
+import Express from 'express';
+import Webpack from 'webpack';
+import WebpackMiddleware from 'webpack-dev-middleware';
+import logger from '../util/logger';
 
 import {
   BLACKJACK_HOME,
@@ -8,20 +9,21 @@ import {
   COMPONENT_CONF
 } from '../constants';
 
-const componentConfig = require(COMPONENT_CONF);
-const previewPath =  componentConfig.blackjack.preview;
+const SERVER_PORT = process.env.PORT || 3000;
+const COMPONENT_CONFIG = require(COMPONENT_CONF);
+const PREVIEW_PATH =  COMPONENT_CONFIG.blackjack.preview;
 
-if(!previewPath){
+if(!PREVIEW_PATH){
   throw 'No blackjack.preview setting found in package.json!';
 }
 
-const app = express();
+const app = Express();
 
 app.use(
-  webpackMiddleware(
-    webpack({
+  WebpackMiddleware(
+    Webpack({
       entry: {
-        filename: `${WORKING_DIR}/${previewPath}`
+        filename: `${WORKING_DIR}/${PREVIEW_PATH}`
       },
       output: {
           path: '/'
@@ -29,11 +31,8 @@ app.use(
       module: {
           loaders: [
               {
-                  test: /\.css$/,
-                  loaders: [
-                      'style-loader',
-                      'css-loader?sourceMap'
-                  ]
+                  test: /\.scss$/,
+                  loaders: ['style', 'css', 'sass']
               },
               {
                   test: /\.js$|.jsx$/,
@@ -61,7 +60,7 @@ app.use(
           root: `${BLACKJACK_HOME}/node_modules`
       },
       plugins: [
-          new webpack.PrefetchPlugin('react'),
+          new Webpack.PrefetchPlugin('react'),
       ]
     }), {
       publicPath: '/assets/',
@@ -80,4 +79,6 @@ app.get('/', (req, res) => {
 
 });
 
-app.listen(process.env.PORT || 3000);
+logger.info(`Starting server on http://localhost:${SERVER_PORT}`)
+
+app.listen(SERVER_PORT);
