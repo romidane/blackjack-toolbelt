@@ -6,15 +6,15 @@ import FileCreator from './file-creator';
 export default {
 
   buildTemplate(name){
-    return `.${name} {}
+    return `.${name} { color: green; }
 `;
   },
 
   run(directoryPath, name) {
-    const directory = `${directoryPath}/styles`;
+    const directory = `${directoryPath}/styles/components`;
     const underscoreName = caseChanger.snakeCase(name);
     const template = this.buildTemplate(name)
-    const path = `${directory}/${underscoreName}.js`;
+    const path = `${directory}/${underscoreName}.scss`;
 
     DirectoryCreator.run(directory)
     FileCreator.run(path, template);

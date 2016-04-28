@@ -7,13 +7,18 @@ export default {
 
   buildTemplate(name){
     const klass = caseChanger.pascalCase(name);
+    const stylesheet = caseChanger.snakeCase(name);
 
     return `import React from 'react';
+
+require('../../styles/components/${stylesheet}.scss');
 
 class ${klass} extends React.Component {
 
   render(){
-    return 'Hello world!';
+    return (
+      <div className="${name}">Hello world!</div>
+    );
   }
 
 }
