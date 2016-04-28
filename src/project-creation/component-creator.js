@@ -11,11 +11,13 @@ export default {
 
     return `import React from 'react';
 
-require('../../styles/components/${stylesheet}.scss');
+if (process.env.WEBPACK_BUILD) {
+  require('../../styles/components/${stylesheet}.scss');
+}
 
 class ${klass} extends React.Component {
 
-  render(){
+  render() {
     return (
       <div className="${name}">Hello world!</div>
     );
