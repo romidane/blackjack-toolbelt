@@ -9,14 +9,19 @@ export default {
   "version": "0.0.1",
   "description": "A blackjack component.",
   "scripts": {
-    "test": "blackjack test"
+    "test": "blackjack test",
+    "preview": "blackjack preview"
   },
   "author": "Sky UK",
-  "license": "\tBSD-3-Clause",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "babel-loader": "^6.2.4",
     "react": "^0.14.8",
+    "react-dom": "^15.0.1",
     "sky-toolkit": "github:sky-uk/toolkit"
+  },
+  "blackjack": {
+    "preview": "src/preview.js"
   }
 }
 `;
