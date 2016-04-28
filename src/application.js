@@ -30,7 +30,7 @@ export function run() {
     action(executeCommand);
 
   commander.command('preview').
-    description('Preview the built component locally.').
+    description('Preview the built component locally using a development server.').
     action(executeCommand);
 
   commander.command('test').

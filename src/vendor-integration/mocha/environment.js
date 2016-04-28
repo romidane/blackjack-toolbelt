@@ -15,4 +15,5 @@ module.exports = function(){
   paths.addPath(`${BLACKJACK_HOME}/node_modules`);
   paths.addPath(`${WORKING_DIR}/node_modules`);
   paths.addPath(`${WORKING_DIR}/src`);
+  paths.addPath(`${WORKING_DIR}/test`);
 }()

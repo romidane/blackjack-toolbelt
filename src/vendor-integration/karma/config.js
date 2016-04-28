@@ -3,13 +3,14 @@ const BLACKJACK_HOME = process.env.BLACKJACK_HOME;
 const WORKING_DIR = process.env.WORKING_DIR;
 
 module.exports = function(config) {
+
   var karmaConf = {
     frameworks: [ 'jasmine' ],
     reporters: [ 'progress' ],
     browsers: [ 'PhantomJS' ],
     files: [
         BLACKJACK_HOME + '/node_modules/babel-polyfill/dist/polyfill.js',
-        WORKING_DIR + '/tests/**/*.js'
+        WORKING_DIR + '/test/**/*.js'
     ],
     preprocessors: {
       'lib/**/*.js': ['babel'],
@@ -29,11 +30,19 @@ module.exports = function(config) {
         module: {
             loaders: [
                 {
+                    test: /\.scss$/,
+                    loaders: ['style', 'css', 'sass']
+                },
+                {
                   test: /\.js/,
                   exclude: /node_modules/,
                   loader: 'babel-loader',
                   query: {
-                    presets: ['react', 'es2015', 'stage-0']
+                    presets: [
+                      'react',
+                      'es2015',
+                      'stage-0'
+                    ]
                   }
                 }
             ]
@@ -42,7 +51,8 @@ module.exports = function(config) {
           root: [
             path.join(BLACKJACK_HOME, 'node_modules'),
             path.join(WORKING_DIR, 'node_modules'),
-            path.join(WORKING_DIR, 'src')
+            path.join(WORKING_DIR, 'src'),
+            path.join(WORKING_DIR, 'test')
           ]
         },
     },
@@ -59,7 +69,7 @@ module.exports = function(config) {
     concurrency: Infinity
   };
 
-  karmaConf.preprocessors[`${WORKING_DIR}/tests/**/*.js`] = ['webpack'];
+  karmaConf.preprocessors[`${WORKING_DIR}/test/**/*.js`] = ['webpack'];
   karmaConf.preprocessors[`${BLACKJACK_HOME}/node_modules/react/react.js`] = ['babel'];
   karmaConf.preprocessors[`${WORKING_DIR}/node_modules/react/react.js`] = ['babel'];
 
