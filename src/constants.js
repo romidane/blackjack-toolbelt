@@ -11,7 +11,7 @@ module.exports = {
   COMPONENT_CONF: `${WORKING_DIR}/package.json`,
   KARMA_BIN: `${MODULES_DIR}/karma/bin/karma`,
   MOCHA_BIN: `${MODULES_DIR}/mocha/bin/mocha`,
-  TEST_GLOB: `${WORKING_DIR}/tests/**/*.js`,
+  TEST_GLOB: `${WORKING_DIR}/test/**/*.js`,
   KARMA_CONF: `${BLACKJACK_DIR}/src/vendor-integration/karma/config.js`,
   WEBPACK_BIN: `${MODULES_DIR}/webpack/bin/webpack.js`,
   WEBPACK_CONF: `${BLACKJACK_DIR}/src/webpack/dev.config.js`
