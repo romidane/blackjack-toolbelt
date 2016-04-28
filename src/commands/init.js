@@ -18,7 +18,7 @@ export function call(options) {
   DirectoryCreator.run(workingDir);       // name/
   ComponentCreator.run(workingDir, name); // name/src/components/name.js
   StylesCreator.run(workingDir, name);    // name/styles/_name.scss
-  TestCreator.run(workingDir, name);      // name/tests/components/name.test.js
+  TestCreator.run(workingDir, name);      // name/test/components/name.test.js
   PreviewCreator.run(workingDir, name);   // name/src/preview.js
   GitignoreCreator.run(workingDir, name); // name/.gitignore
   PackageCreator.run(workingDir, name);   // name/package.json

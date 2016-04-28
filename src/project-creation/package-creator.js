@@ -18,7 +18,8 @@ export default {
     "babel-loader": "^6.2.4",
     "react": "^0.14.8",
     "react-dom": "^15.0.1",
-    "sky-toolkit": "github:sky-uk/toolkit"
+    "sky-toolkit": "github:sky-uk/toolkit",
+    "sky-blackjack-tools": "github:sky-uk/blackjack-tools"
   },
   "blackjack": {
     "preview": "src/preview.js"
