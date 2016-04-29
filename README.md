@@ -21,11 +21,31 @@ Once installed, you can be able to start a new component from scratch and run th
 
 ## Installation
 
-You can install the toolkit via NPM:
+Sadly due to odd NPM dependency issues (which will be fixed by us in future versions of the tools), you need to clone the tools and follow a few install steps. In the future we'll get this down to a `npm install -g sky-uk/blackjack-tools`.
+
+Firstly, clone the repository somewhere on your machine:
 
 ```
-npm install -g sky-uk/blackjack-tools
+git clone git@github.com:sky-uk/blackjack-tools.git
 ```
+
+Then run an NPM install
+
+```
+cd blackjack-tools
+npm install
+```
+
+_Wait roughly 5 years._
+
+Finally, you need to add the ./bin directory to your path. To do this, get your current working directory, and append /bin to it. Then add it to your path:
+
+```
+pwd # Returns something like /Users/joshnesbitt/Code/blackjack-tools
+export PATH="$PATH:/Users/joshnesbitt/Code/blackjack-tools/bin"
+```
+
+You'll probably want to save the export in your bash profile.
 
 
 ## Prerequisites
