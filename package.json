@@ -1,6 +1,6 @@
 {
   "name": "blackjack-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Blackjack Util Toolkit Available at the CLI",
   "scripts": {
     "lint": "eslint -c .eslintrc.json --ext .js lib test"
