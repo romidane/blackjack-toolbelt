@@ -29,7 +29,7 @@ Firstly, clone the repository somewhere on your machine:
 git clone git@github.com:sky-uk/blackjack-tools.git
 ```
 
-Then run an NPM install
+Then run an NPM install:
 
 ```
 cd blackjack-tools
@@ -46,6 +46,12 @@ export PATH="$PATH:/Users/joshnesbitt/Code/blackjack-tools/bin"
 ```
 
 You'll probably want to save the export in your bash profile.
+
+Now you should be able to use the tools anywhere on your system:
+
+```
+blackjack --help
+```
 
 
 ## Prerequisites
