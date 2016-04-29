@@ -38,7 +38,7 @@ npm install
 
 _Wait roughly 5 years._
 
-Finally, you need to add the ./bin directory to your path. To do this, get your current working directory, and append /bin to it. Then add it to your path:
+Finally, you need to add the `./bin` directory to your path. To do this, get your current working directory, and append `/bin` to it. Then add it to your path:
 
 ```
 pwd # Returns something like /Users/joshnesbitt/Code/blackjack-tools
