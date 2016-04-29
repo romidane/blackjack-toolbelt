@@ -12,9 +12,9 @@ export default {
     return `import ${klass} from '../../src/components/${path}';
 
 describe('${klass}', () => {
-
-  it('should render', () => {});
-
+  it('should render', () => {
+    // Implement your tests here...
+  });
 });
 `;
   },

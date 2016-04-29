@@ -66,15 +66,15 @@ Commands are currently being developed, the status of them is defined below.
 
 ### Complete
 
+* **init** - create a new component.
 * **lint** - lint all in test and lib dirs.
 * **test** - run JS tests in your test directory.
+* **preview** - preview the built component locally.
 
 
 ### Pending
 
-* **bundle** - creates a production bundle of CSS/JS.
-* **init** - create a new component.
-* **preview** - preview the built component locally.
+_No pending commands right now._
 
 
 ## Contributors

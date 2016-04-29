@@ -6,17 +6,20 @@ import FileCreator from './file-creator';
 export default {
 
   buildTemplate(name){
-    return `.${name} { color: green; }
+    const klass = caseChanger.pascalCase(name);
+
+    return `import React from 'react';
+import ReactDOM from 'react-dom';
+import ${klass} from './components/${klass}';
+
+ReactDOM.render(<${klass} />, window.container);
 `;
   },
 
   run(directoryPath, name) {
-    const directory = `${directoryPath}/styles/components`;
-    const underscoreName = caseChanger.snakeCase(name);
     const template = this.buildTemplate(name)
-    const path = `${directory}/${underscoreName}.scss`;
+    const path = `${directoryPath}/src/preview.js`;
 
-    DirectoryCreator.run(directory)
     FileCreator.run(path, template);
 
     logger.success(`+ ${path}`);
