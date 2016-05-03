@@ -5,7 +5,7 @@ export default {
 
   buildTemplate(name){
     return `{
-  "name": "blackjack-${name}",
+  "name": "blackjack-component-${name}",
   "version": "0.0.1",
   "description": "A blackjack component.",
   "scripts": {
