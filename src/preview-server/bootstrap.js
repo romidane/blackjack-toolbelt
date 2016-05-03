@@ -33,7 +33,11 @@ app.use(
           loaders: [
               {
                   test: /\.scss$/,
-                  loaders: ['style', 'css', 'sass']
+                  loaders: [
+                    'style',
+                    'css',
+                    `sass?includePaths[]=${BLACKJACK_HOME}/node_modules&includePaths[]=${WORKING_DIR}/node_modules`
+                  ]
               },
               {
                   test: /\.js$|.jsx$/,
