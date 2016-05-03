@@ -12,9 +12,8 @@ export default {
 
   run(directoryPath, name) {
     const directory = `${directoryPath}/styles/components`;
-    const underscoreName = caseChanger.snakeCase(name);
     const template = this.buildTemplate(name)
-    const path = `${directory}/${underscoreName}.scss`;
+    const path = `${directory}/${name}.scss`;
 
     DirectoryCreator.run(directory)
     FileCreator.run(path, template);

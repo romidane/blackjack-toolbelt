@@ -7,12 +7,11 @@ export default {
 
   buildTemplate(name){
     const klass = caseChanger.pascalCase(name);
-    const stylesheet = caseChanger.snakeCase(name);
 
     return `import React from 'react';
 
 if (process.env.WEBPACK_BUILD) {
-  require('../../styles/components/${stylesheet}.scss');
+  require('../../styles/components/${name}.scss');
 }
 
 class ${klass} extends React.Component {
@@ -31,9 +30,8 @@ export default ${klass};
 
   run(directoryPath, name) {
     const directory = `${directoryPath}/src/components`;
-    const underscoreName = caseChanger.snakeCase(name);
     const template = this.buildTemplate(name)
-    const path = `${directory}/${underscoreName}.js`;
+    const path = `${directory}/${name}.js`;
 
     DirectoryCreator.run(directory)
     FileCreator.run(path, template);

@@ -10,7 +10,7 @@ export default {
 
     return `import React from 'react';
 import ReactDOM from 'react-dom';
-import ${klass} from './components/${klass}';
+import ${klass} from './components/${name}';
 
 ReactDOM.render(<${klass} />, window.container);
 `;

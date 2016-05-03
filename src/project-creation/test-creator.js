@@ -7,9 +7,8 @@ export default {
 
   buildTemplate(name){
     const klass = caseChanger.pascalCase(name);
-    const path = caseChanger.snakeCase(name);
 
-    return `import ${klass} from '../../src/components/${path}';
+    return `import ${klass} from '../../src/components/${name}';
 
 describe('${klass}', () => {
   it('should render', () => {
@@ -21,9 +20,8 @@ describe('${klass}', () => {
 
   run(directoryPath, name) {
     const directory = `${directoryPath}/test/components`;
-    const underscoreName = caseChanger.snakeCase(name);
     const template = this.buildTemplate(name)
-    const path = `${directory}/${underscoreName}.test.js`;
+    const path = `${directory}/${name}.test.js`;
 
     DirectoryCreator.run(directory)
     FileCreator.run(path, template);
