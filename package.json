@@ -1,17 +1,34 @@
 {
   "name": "blackjack-utils",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A Blackjack Util Toolkit Available at the CLI",
   "scripts": {
-    "lint": "eslint -c .eslintrc.json --ext .js lib test"
+    "lint": "eslint -c .eslintrc.json --ext .js lib test",
+    "postinstall": "./node_modules/.bin/babel src -d dist"
   },
   "bin": {
-    "blackjack": "./bin/blackjack"
+    "blackjack": "./bin/blackjack",
+    "bj": "./bin/blackjack"
   },
   "author": "Richard McIntyre",
+  "maintainers": [
+    {
+      "email": "richard.mcintyre@sky.uk",
+      "name": "blackjack"
+    },
+    {
+      "email": "richard.mackstar@gmail.com",
+      "name": "mackstar"
+    },
+    {
+      "email": "joshnesbitt@gmail.com",
+      "name": "joshnesbitt"
+    }
+  ],
   "license": "BSD-3-Clause",
   "dependencies": {
     "app-module-path": "^1.0.5",
+    "babel-cli": "^6.8.0",
     "babel-core": "^6.7.4",
     "babel-eslint": "^5.0.0",
     "babel-loader": "^6.2.4",
