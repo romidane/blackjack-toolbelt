@@ -12,6 +12,7 @@ export default {
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Authors](#authors)
 
 
 ## Introduction
@@ -24,13 +25,18 @@ A readme for your component would go here.
 You can install this component using:
 
 \`\`\`
-npm install blackjack-component-${name}
+npm install blackjack-component-${name} --save
 \`\`\`
 
 
 ## Usage
 
 Usage instructions would go here, such as info on what props to pass in etc.
+
+
+## Authors
+
+* [?](mailto:?)
 `;
   },
 
