@@ -3,7 +3,7 @@ import FileCreator from './file-creator';
 
 export default {
 
-  buildTemplate(name){
+  buildTemplate(name) {
     return `{
   "name": "blackjack-component-${name}",
   "version": "0.0.1",
@@ -27,7 +27,7 @@ export default {
   },
 
   run(directoryPath, name) {
-    const template = this.buildTemplate(name)
+    const template = this.buildTemplate(name);
     const path = `${directoryPath}/package.json`;
 
     FileCreator.run(path, template);
@@ -35,4 +35,4 @@ export default {
     logger.success(`+ ${path}`);
   }
 
-}
+};

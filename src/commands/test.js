@@ -9,24 +9,24 @@ import {
   KARMA_BIN
 } from '../constants';
 
-const ENV_VARS = `BLACKJACK_HOME=${BLACKJACK_HOME} WORKING_DIR=${WORKING_DIR}`
+const ENV_VARS = `BLACKJACK_HOME=${BLACKJACK_HOME} WORKING_DIR=${WORKING_DIR}`;
 
 export function call(options) {
   const runner = options.runner || 'mocha';
 
-  switch(runner){
+  switch (runner) {
 
     case 'mocha':
       exec(`${ENV_VARS} ${MOCHA_BIN} "${TEST_GLOB}" --require ${BLACKJACK_HOME}/src/vendor-integration/mocha/environment.js --harmony --es_staging`);
-    break;
+      break;
 
     case 'karma':
       exec(`${ENV_VARS} ${KARMA_BIN} start ${KARMA_CONF}`);
-    break;
+      break;
 
     default:
       logger.warn(`Test runner '${runner}' unsupported!`);
-    break;
+      break;
 
   }
 }

@@ -5,7 +5,7 @@ import FileCreator from './file-creator';
 
 export default {
 
-  buildTemplate(name){
+  buildTemplate(name) {
     const klass = caseChanger.pascalCase(name);
 
     return `import React from 'react';
@@ -30,13 +30,13 @@ export default ${klass};
 
   run(directoryPath, name) {
     const directory = `${directoryPath}/src/components`;
-    const template = this.buildTemplate(name)
+    const template = this.buildTemplate(name);
     const path = `${directory}/${name}.js`;
 
-    DirectoryCreator.run(directory)
+    DirectoryCreator.run(directory);
     FileCreator.run(path, template);
 
     logger.success(`+ ${path}`);
   }
 
-}
+};

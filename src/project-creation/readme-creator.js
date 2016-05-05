@@ -4,7 +4,7 @@ import FileCreator from './file-creator';
 
 export default {
 
-  buildTemplate(name){
+  buildTemplate(name) {
     const title = caseChanger.titleCase(name);
 
     return `# Blackjack Component - ${title}
@@ -41,7 +41,7 @@ Usage instructions would go here, such as info on what props to pass in etc.
   },
 
   run(directoryPath, name) {
-    const template = this.buildTemplate(name)
+    const template = this.buildTemplate(name);
     const path = `${directoryPath}/readme.md`;
 
     FileCreator.run(path, template);
@@ -49,4 +49,4 @@ Usage instructions would go here, such as info on what props to pass in etc.
     logger.success(`+ ${path}`);
   }
 
-}
+};
