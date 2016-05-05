@@ -7,9 +7,30 @@ export default {
   buildTemplate(name){
     const title = caseChanger.titleCase(name);
 
-    return `# ${title} Blackjack Component
+    return `# Blackjack Component - ${title}
+
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Usage](#usage)
+
+
+## Introduction
 
 A readme for your component would go here.
+
+
+## Installation
+
+You can install this component using:
+
+\`\`\`
+npm install blackjack-component-${name}
+\`\`\`
+
+
+## Usage
+
+Usage instructions would go here, such as info on what props to pass in etc.
 `;
   },
 
