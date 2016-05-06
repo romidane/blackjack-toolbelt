@@ -79,7 +79,7 @@ app.use(
 );
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', `${BLACKJACK_HOME}/src/preview-server/views`);
 
 app.get('/', (req, res) => {
 
