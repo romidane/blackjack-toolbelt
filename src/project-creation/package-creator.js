@@ -15,9 +15,9 @@ export default {
   "author": "Sky UK",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "blackjack-toolbelt": "github:sky-uk/blackjack-toolbelt",
     "react": "^0.14.8",
-    "sky-toolkit": "github:sky-uk/toolkit",
-    "sky-blackjack-tools": "github:sky-uk/blackjack-tools"
+    "sky-toolkit": "github:sky-uk/toolkit"
   },
   "blackjack": {
     "preview": "src/preview.js"
