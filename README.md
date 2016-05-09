@@ -1,4 +1,4 @@
-# Blackjack CLI Tools
+# Blackjack Toolbelt
 
 
 ## Contents
@@ -26,7 +26,7 @@ Sadly due to odd NPM dependency issues (which will be fixed by us in future vers
 Firstly, clone the repository somewhere on your machine:
 
 ```
-git clone git@github.com:sky-uk/blackjack-tools.git
+git clone git@github.com:sky-uk/blackjack-toolbelt.git
 ```
 
 Then run an NPM install:
