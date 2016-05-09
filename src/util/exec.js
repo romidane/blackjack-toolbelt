@@ -1,11 +1,11 @@
 import { exec } from 'child_process';
 import logger from './logger';
 
-export default function(command) {
-  exec(command + ' --color', (error, stdout, stderr) => {
+export default function (command) {
+  exec(`${command} --color`, (error, stdout, stderr) => {
     logger.info(`${stdout}`);
 
-    if(stderr) {
+    if (stderr) {
       logger.info(`${stderr}`);
     }
 

@@ -6,4 +6,4 @@ export default {
     filesystem.writeFileSync(path, contents);
   }
 
-}
+};

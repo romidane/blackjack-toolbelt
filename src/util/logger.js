@@ -1,25 +1,25 @@
 const colors = require('colors/safe');
 
-function log(color, message){
+function log(color, message) {
   console.log(colors[color](message));
 }
 
 export default {
 
-  info(message){
+  info(message) {
     log('white', message);
   },
 
-  warn(message){
+  warn(message) {
     log('yellow', message);
   },
 
-  error(message){
+  error(message) {
     log('red', message);
   },
 
-  success(message){
+  success(message) {
     log('green', message);
   }
 
-}
+};

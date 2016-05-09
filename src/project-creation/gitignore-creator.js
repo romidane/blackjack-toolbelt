@@ -3,13 +3,13 @@ import FileCreator from './file-creator';
 
 export default {
 
-  buildTemplate(name){
+  buildTemplate() {
     return `node_modules
 `;
   },
 
-  run(directoryPath, name) {
-    const template = this.buildTemplate(name)
+  run(directoryPath) {
+    const template = this.buildTemplate();
     const path = `${directoryPath}/.gitignore`;
 
     FileCreator.run(path, template);
@@ -17,4 +17,4 @@ export default {
     logger.success(`+ ${path}`);
   }
 
-}
+};

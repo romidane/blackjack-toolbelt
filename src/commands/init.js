@@ -20,7 +20,7 @@ export function call(options) {
   StylesCreator.run(workingDir, name);    // name/styles/_name.scss
   TestCreator.run(workingDir, name);      // name/test/components/name.test.js
   PreviewCreator.run(workingDir, name);   // name/src/preview.js
-  GitignoreCreator.run(workingDir, name); // name/.gitignore
+  GitignoreCreator.run(workingDir);       // name/.gitignore
   PackageCreator.run(workingDir, name);   // name/package.json
   ReadmeCreator.run(workingDir, name);    // name/README.md
 
