@@ -2,10 +2,6 @@ const BLACKJACK_DIR = require('path').dirname(__dirname);
 const MODULES_DIR = `${BLACKJACK_DIR}/node_modules`;
 const WORKING_DIR = process.cwd();
 
-console.log("------------")
-console.log(BLACKJACK_DIR)
-console.log("------------")
-
 module.exports = {
   WORKING_DIR,
   BLACKJACK_HOME: BLACKJACK_DIR,
