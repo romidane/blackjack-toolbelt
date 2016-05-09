@@ -13,7 +13,10 @@ module.exports = function (config) {
     ],
     preprocessors: {
       'lib/**/*.js': ['babel'],
-      'test/**/*.js': ['babel']
+      'test/**/*.js': ['babel'],
+      'test/**/*.spec.js': ['webpack'],
+      'src/**/*.js': ['coverage']
+
     },
     babelPreprocessor: {
       options: {
@@ -27,10 +30,26 @@ module.exports = function (config) {
     webpack: {
       context: WORKING_DIR,
       module: {
+        preLoaders: [
+          {
+            test: /\.js$/,
+            loader: 'isparta',
+            exclude: /(node_modules)/,
+            include: [/(src)/, /envConfig.js/]
+          }
+        ],
         loaders: [
           {
             test: /\.scss$/,
-            loaders: ['style', 'css', 'sass']
+            loaders: [
+              'style',
+              'css',
+              `sass?includePaths[]=${BLACKJACK_HOME}/node_modules&includePaths[]=${WORKING_DIR}/node_modules`
+            ]
+          },
+          {
+            test: /\.json$/,
+            loader: 'json'
           },
           {
             test: /\.js/,
@@ -52,8 +71,14 @@ module.exports = function (config) {
           path.join(WORKING_DIR, 'node_modules'),
           path.join(WORKING_DIR, 'src'),
           path.join(WORKING_DIR, 'test')
-        ]
+        ],
+        extensions: ['', '.js']
       },
+      externals: {
+        'cheerio': 'window',
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
+      }
     },
     webpackServer: {
       noInfo: true
@@ -65,7 +90,8 @@ module.exports = function (config) {
     watch: true,
     autoWatch: true,
     singleRun: true,
-    concurrency: Infinity
+    concurrency: Infinity,
+    reportSlowerThan: 50
   };
 
   karmaConf.preprocessors[`${WORKING_DIR}/test/**/*.js`] = ['webpack'];
