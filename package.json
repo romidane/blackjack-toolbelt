@@ -1,7 +1,7 @@
 {
-  "name": "blackjack-utils",
+  "name": "blackjack-toolbelt",
   "version": "0.2.1",
-  "description": "A Blackjack Util Toolkit Available at the CLI",
+  "description": "A Blackjack Util Toolbelt Available at the CLI",
   "scripts": {
     "lint": "eslint -c .eslintrc.json --ext .js lib test",
     "postinstall": "./node_modules/.bin/babel src -d dist"
