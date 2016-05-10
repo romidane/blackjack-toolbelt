@@ -1,6 +1,6 @@
 {
   "name": "blackjack-toolbelt",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A Blackjack Util Toolbelt Available at the CLI",
   "scripts": {
     "lint": "eslint -c .eslintrc.json --ext .js lib test",
