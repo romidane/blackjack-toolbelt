@@ -6,10 +6,10 @@ import logger from '../util/logger';
 import {
   BLACKJACK_HOME,
   WORKING_DIR,
-  COMPONENT_CONF
+  COMPONENT_CONF,
+  PREVIEW_SERVER_PORT
 } from '../constants';
 
-const SERVER_PORT = process.env.PORT || 3000;
 const COMPONENT_CONFIG = require(COMPONENT_CONF);
 const BLACKJACK_CONFIG = COMPONENT_CONFIG.blackjack || {};
 const PREVIEW_PATH = BLACKJACK_CONFIG.preview;
@@ -98,6 +98,6 @@ app.get('/', (req, res) => {
   res.render('index', { template: '', brand: '', component: '' });
 });
 
-logger.info(`Starting server on http://localhost:${SERVER_PORT}`);
+logger.info(`Launching server and listening for changes on http://localhost:${PREVIEW_SERVER_PORT}.`);
 
-app.listen(SERVER_PORT);
+app.listen(PREVIEW_SERVER_PORT);

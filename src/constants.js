@@ -11,5 +11,6 @@ module.exports = {
   KARMA_BIN: `${MODULES_DIR}/karma/bin/karma`,
   KARMA_CONF: `${BLACKJACK_DIR}/src/vendor-integration/karma/config.js`,
   MOCHA_BIN: `${MODULES_DIR}/mocha/bin/mocha`,
-  TEST_GLOB: `${WORKING_DIR}/test/**/*.js`
+  TEST_GLOB: `${WORKING_DIR}/test/**/*.js`,
+  PREVIEW_SERVER_PORT: process.env.PORT || 9876
 };
