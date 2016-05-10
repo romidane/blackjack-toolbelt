@@ -73,7 +73,20 @@ app.use(
     }), {
       publicPath: '/assets/',
       stats: {
-        colors: true
+        colors: true,
+        hash: false,
+        version: false,
+        timings: true,
+        assets: false,
+        chunks: false,
+        chunkModules: false,
+        modules: false,
+        cached: false,
+        reasons: false,
+        source: true,
+        errorDetails: true,
+        chunkOrigins: true,
+        children: false
       }
     })
 );
